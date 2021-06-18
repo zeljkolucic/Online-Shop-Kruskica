@@ -1,0 +1,20 @@
+<table *ngIf='korpa.length > 0; else nemaProizvoda'>
+    <tr>
+        <th>Naziv</th>
+        <th>Kolicina</th>
+    </tr>
+    <tr *ngFor='let proizvod of korpa'>
+        <td>{{proizvod.naziv}}</td>
+        <td>{{proizvod.stanje_g}}</td>
+    </tr>
+    <tr>
+        Vas racun iznosi: {{racun}}
+    </tr>
+</table>
+<ng-template #nemaProizvoda>
+    Nema proizvoda u korpi!
+    <br>
+</ng-template>
+
+<button (click)='kupi()'>Kupi</button>
+<button (click)='nazad()'>Nazad</button>

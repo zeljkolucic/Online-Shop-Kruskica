@@ -1,0 +1,28 @@
+<table>
+    <tr>
+        <td>Korisnicko ime:</td>
+        <td>
+            <input type='text' [(ngModel)]='korIme'>
+        </td>
+    </tr>
+    <tr>
+        <td>Lozinka:</td>
+        <td>
+            <input type='text' [(ngModel)]='lozinka'>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Kupac<input type='radio' name='tip' [(ngModel)]='tip' value='kupac'>
+        </td>
+        <td>
+            Radnik<input type='radio' name='tip' [(ngModel)]='tip' value='radnik'>
+        </td>
+    </tr>
+    <tr>
+        <td colspan='3'>
+            <button (click)='prijava()'>Prijava</button>
+        </td>
+    </tr>
+</table>
+<span style='color: red'>{{greska}}</span>

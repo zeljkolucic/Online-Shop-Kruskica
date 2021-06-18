@@ -1,0 +1,22 @@
+<table>
+    <tr>
+        <th>Naziv</th>
+        <th>Cena</th>
+        <th>Kolicina</th>
+    </tr>
+    <tr>
+        <td>{{proizvod.naziv}}</td>
+        <td>{{proizvod.cena_kg}}</td>
+        <td>{{proizvod.stanje_g}}</td>
+        <td>
+            <input type='text' name='kolicina' [(ngModel)]='kolicina'>
+        </td>
+        <td>
+            <button (click)='dodaj()'>Dodaj</button>
+        </td>
+    </tr>
+</table>
+<button (click)='korpa()'>Korpa</button>
+<button (click)='nazad()'>Nazad</button>
+<br>
+<span style='color: red'>{{greska}}</span>

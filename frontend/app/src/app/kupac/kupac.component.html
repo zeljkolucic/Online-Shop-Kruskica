@@ -1,0 +1,15 @@
+<h2>Dobrodosao {{korisnik.korIme}}!</h2>
+<table>
+    <tr>
+        <th>Naziv</th>
+        <th>Jedinicna cena (po kg)</th>
+    </tr>
+    <tr *ngFor='let proizvod of proizvodi' [class.nemaNaStanju]='proizvod.stanje_g == 0'>
+        <td>{{proizvod.naziv}}</td>
+        <td>{{proizvod.cena_kg}}</td>
+        <td *ngIf='proizvod.stanje_g > 0'>
+            <button (click)='naruci(proizvod)'>Naruci</button>
+        </td>
+    </tr>
+</table>
+<button (click)='odjava()'>Odjavi se</button>

@@ -1,0 +1,11 @@
+<select name='proizvod' [(ngModel)]='proizvod'>
+    <option *ngFor='let pro of proizvodi'>{{pro.naziv}}</option>
+</select>
+<select name='kolicina' [(ngModel)]='kolicina'>
+    <option *ngFor='let kol of kolicine'>{{kol}}</option>
+</select>
+<button (click)='dodaj()'>Dodaj</button>
+<br>
+<button (click)='odjava()'>Odjavi se</button>
+<br>
+<span style='color: red'>{{greska}}</span>
